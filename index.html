@@ -8,7 +8,6 @@
         <meta name="viewport" content="width=device-width" />
         <link rel="shortcut icon" href="./icons/favicon.ico" />
         <link href="src/style/index.css" rel="stylesheet" />
-        <link href="src/style/modern.css" rel="stylesheet" />
         <!--script src="./eruda.min.js"></script>
         <script>eruda.init();</script-->
         <script>
@@ -142,38 +141,19 @@
     </head>
     <body>
         <div class="file-select">
-            <header class="app-header">
-                <h1>phi-chart-render</h1>
-                <div class="browser-notices">
-                    <div class="notice">
-                        <span class="icon">📱</span>
-                        <div class="notice-content">
-                            <strong>iOS用户请注意：</strong>
-                            建议使用Quark浏览器以获得更好的体验
-                        </div>
-                    </div>
-                    <div class="notice">
-                        <span class="icon">⚠️</span>
-                        <div class="notice-content">
-                            <strong>Android用户请注意：</strong>
-                            由于Firefox性能问题，建议使用
-                            <a href="https://github.com/kiwibrowser/src.next/releases" target="_blank">Kiwi Browser</a>、
-                            <a href="https://viayoo.com/" target="_blank">Via</a> 或
-                            <a href="https://www.google.com/chrome/" target="_blank">Chrome</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="announcement">
-                    <a href="https://t.bilibili.com/820800655803285656" target="_blank" class="announcement-link">
-                        <span class="icon">📢</span>
-                        致中国大陆用户的公告
-                    </a>
-                </div>
-                <div class="loading-status" id="loading-status">
-                    <div class="loading-spinner"></div>
-                    <span>Loading scripts...</span>
-                </div>
-            </header>
+            <div>
+                <b>For iOS users:</b><br>
+                Please use Quark Browser for better experience (not ad) .
+            </div>
+            <hr />
+            <div>
+                Due to some performance issue on FireFox Android, consider using <a href="https://github.com/kiwibrowser/src.next/releases" target="_blank">Kiwi Browser</a> or <a href="https://viayoo.com/" target="_blank">Via</a> or <a href="https://www.google.com/chrome/" target="_blank">Google Chrome</a>.
+            </div>
+            <hr />
+            <a href="https://t.bilibili.com/820800655803285656" target="_blank">致中国大陆用户的公告</a>
+            <hr />
+            <div class="loading" id="loading-status">Loading scripts...</div>
+            <hr />
             <div class="tab">
                 <div class="bar">
                     <div data-tab-id="file" class="active">File</div>
