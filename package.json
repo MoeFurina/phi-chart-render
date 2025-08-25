@@ -8,10 +8,10 @@
   ],
   "main": "src/main.js",
   "scripts": {
-    "dev": "npx vite",
-    "dev:prod": "npx vite --mode production",
-    "build": "npx vite build",
-    "build:dev": "npx vite build --mode development"
+    "dev": "vite",
+    "dev:prod": "vite --mode production",
+    "build": "vite build",
+    "build:dev": "vite build --mode development"
   },
   "repository": {
     "type": "git",
