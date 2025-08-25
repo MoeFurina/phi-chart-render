@@ -363,7 +363,7 @@ doms.startBtn.addEventListener('click', async () => {
             debug: doms.settings.debug.checked,
             shader: doms.settings.prprExtra.checked
         },
-        watermark: 'github/MisaLiu/phi-chart-render ' + GIT_VERSION + (import.meta.env.MODE === 'development' ? ' [Develop Mode]' : '')
+        watermark: 'Current Version: ' + GIT_VERSION + (import.meta.env.MODE === 'development' ? ' [Develop Mode]' : '')
     });
 
     document.body.appendChild(GlobalGame.render.view);
