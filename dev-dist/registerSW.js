@@ -1,1 +1,0 @@
-if('serviceWorker' in navigator) navigator.serviceWorker.register('/phi-chart-render/dev-sw.js?dev-sw', { scope: '/phi-chart-render/', type: 'classic' })
