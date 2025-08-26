@@ -156,16 +156,16 @@
             <hr />
             <div class="tab">
                 <div class="bar">
-                    <div data-tab-id="file" class="active">File</div>
-                    <div data-tab-id="visual">Visual</div>
-                    <div data-tab-id="sound">Sound</div>
-                    <div data-tab-id="other">Other</div>
-                    <div data-tab-id="phizone">PhiZone</div>
+                    <div data-tab-id="file" class="active">文件</div>
+                    <div data-tab-id="visual">视觉</div>
+                    <div data-tab-id="sound">声音</div>
+                    <div data-tab-id="other">其他</div>
+                    <div data-tab-id="phizone">来自PhiZone</div>
                 </div>
                 <div class="content">
                     <div id="tab-file">
-                        <label>Select chart file(s): <input type="file" id="file-chart-pack" multiple disabled></label><br>
-                        <div class="loading" id="file-read-progress">Please wait until assets loaded...</div>
+                        <label>选择谱面文件： <input type="file" id="file-chart-pack" multiple disabled></label><br>
+                        <div class="loading" id="file-read-progress">请等待资源加载完成...</div>
                         <hr />
                         <label>Chart: <select id="file-chart"></select></label><br>
                         <label>Music: <select id="file-music"></select></label><br>
@@ -173,15 +173,15 @@
                     </div>
                     <div id="tab-visual">
                         <label>Custom skin pack: <input type="file" id="file-skin-pack" disabled /></label>&nbsp;<a href="./skin.example.zip" download="skin.example.zip">Download example skin pack</a><br>
-                        <div class="loading" id="loading-skin-pack">No skinpack selected.</div>
+                        <div class="loading" id="loading-skin-pack">未选择皮肤包。</div>
                         <hr />
-                        <label><input type="checkbox" id="settings-show-bg" checked />Show BG</label><br>
-                        <label><input type="checkbox" id="settings-multi-note-hl" checked />Highlight same time notes</label><br>
-                        <label><input type="checkbox" id="settings-show-ap-status" checked />Show AP status</label><br>
-                        <label><input type="checkbox" id="settings-show-input-point" checked />Show input point</label><br>
-                        <label><input type="checkbox" id="settings-anti-alias" checked />Anti-alias</label><br>
-                        <label><input type="checkbox" id="settings-low-resolution" />Low resolution mode</label><br>
-                        <label><input type="checkbox" id="settings-prpr-extra" checked />Use prpr's extra.json (experimental)</label>
+                        <label><input type="checkbox" id="settings-show-bg" checked />显示背景</label><br>
+                        <label><input type="checkbox" id="settings-multi-note-hl" checked />开启双押提示</label><br>
+                        <label><input type="checkbox" id="settings-show-ap-status" checked />显示AP状态</label><br>
+                        <label><input type="checkbox" id="settings-show-input-point" checked />显示触摸反馈</label><br>
+                        <label><input type="checkbox" id="settings-anti-alias" checked />抗锯齿</label><br>
+                        <label><input type="checkbox" id="settings-low-resolution" />低分辨率模式</label><br>
+                        <label><input type="checkbox" id="settings-prpr-extra" checked />使用prpr的extra.json（实验性）</label>
                         <hr />
                         <label>BG quality: <select id="settings-bg-quality">
                             <option value="0">Low (480P)</option>
@@ -190,40 +190,40 @@
                             <option value="3">Original</option>
                         </select></label>
                         <hr />
-                        <label>Note scale: <input type="range" id="settings-note-scale" min="0" max="4000" value="2000"></label><br>
+                        <label>Note 缩放: <input type="range" id="settings-note-scale" min="0" max="4000" value="2000"></label><br>
                         <label>Background dim: <input type="range" id="settings-bg-dim" min="0" max="1" step="0.01" value="0.5"></label><br>
-                        <label>BG blur: <input type="range" id="settings-bg-blur" min="0" max="100" value="50" /></label>
+                        <label>BG 模糊: <input type="range" id="settings-bg-blur" min="0" max="100" value="50" /></label>
                     </div>
                     <div id="tab-sound">
-                        <label>Chart offset: <input type="number" id="settings-audio-offset" placeholder="0" style="width:4em" />ms</label><br>
+                        <label>谱面延时: <input type="number" id="settings-audio-offset" placeholder="0" style="width:4em" />ms</label><br>
                         <div style="margin-left:20px">(recommended 100ms for Chrome/Chrome based browsers)</div>
                         <button id="settings-test-input-delay">Tap on this button to test input delay...</button><br>
                         <label><input type="checkbox" id="settings-use-browser-latency" />Use browser's output latency (experimental)</label><br>
-                        <label>Speed: <input type="range" id="settings-audio-speed" min="0.25" max="1.75" step="0.25" value="1"></label><br>
+                        <label>谱面速度: <input type="range" id="settings-audio-speed" min="0.25" max="1.75" step="0.25" value="1"></label><br>
                         <hr />
-                        <label><input type="checkbox" id="settings-hitsound" checked />Hitsound</label><br>
-                        <label>Hitsound volume: <input type="range" id="settings-hitsound-volume" min="0" max="1" step="0.01" value="1"></label><br>
+                        <label><input type="checkbox" id="settings-hitsound" checked />打击音效</label><br>
+                        <label>打击音效音量: <input type="range" id="settings-hitsound-volume" min="0" max="1" step="0.01" value="1"></label><br>
                     </div>
                     <div id="tab-other">
-                        <label><input type="checkbox" id="settings-challenge-mode" />Challenge Mode</label><br>
-                        <label><input type="checkbox" id="settings-plyndb" />Play like you never did before</label><br>
-                        <label><input type="checkbox" id="settings-autoplay" />AutoPlay</label><br>
-                        <label><input type="checkbox" id="settings-debug" />Debug</label><br>
+                        <label><input type="checkbox" id="settings-challenge-mode" />严格判定</label><br>
+                        <label><input type="checkbox" id="settings-plyndb" />滑动变阻器</label><br>
+                        <label><input type="checkbox" id="settings-autoplay" />自动播放</label><br>
+                        <label><input type="checkbox" id="settings-debug" />调试模式</label><br>
                     </div>
                     <div id="tab-phizone">
-                        <label>Paste chart link/ID from <a href="https://www.phi.zone/" target="_href">PhiZone</a> here: <input id="phizone-chart-link" /></label>
-                        <button id="phizone-download-chart">Download</button>
+                        <label>请粘贴来自 <a href="https://www.phi.zone/" target="_href">PhiZone</a> 的链接/ID: <input id="phizone-chart-link" /></label>
+                        <button id="phizone-download-chart">开始下载</button>
                         <hr />
-                        <div class="loading" id="phizone-download-progress">No download task</div>
+                        <div class="loading" id="phizone-download-progress">没有下载任务</div>
                     </div>
                 </div>
             </div>
             <hr />
-            <button id="start" disabled>Start</button>
+            <button id="start" disabled>开始</button>
             <hr />
-            Current version: <%= GIT_VERSION %></a>
+            当前版本: <%= GIT_VERSION %></a>
 
-            <button onclick="fullscreen.toggle(document.body, false)" class="fullscreen" id="fullscreen">Fullscreen</button>
+            <button onclick="fullscreen.toggle(document.body, false)" class="fullscreen" id="fullscreen">全屏</button>
         </div>
 
         <div class="debug-value"></div>
@@ -283,10 +283,10 @@
 
         <div class="game-paused">
             <div class="action">
-                <button onclick="fullscreen.toggle(document.body, false)">Fullscreen</button>
-                <button onclick="exitGame()">Exit</button>
-                <button onclick="restartGame()">Restart</button>
-                <button onclick="pauseGame()">Continue</button>
+                <button onclick="fullscreen.toggle(document.body, false)">全屏</button>
+                <button onclick="exitGame()">退出</button>
+                <button onclick="restartGame()">重启</button>
+                <button onclick="pauseGame()">继续</button>
             </div>
         </div>
 
